@@ -1,0 +1,80 @@
+/* MidMind Website – Layout-Klebstoff um die Design-System-Komponenten (assets/mm).
+ * Übernommen aus ui_kits/website/index.html. Farben nur über Tokens, sonst bricht der Nachtmodus.
+ */
+html, body { margin: 0; }
+body { background: var(--mm-paper); }
+a { color: var(--mm-moss); }
+a:hover { color: var(--mm-ink); }
+
+.w-wrap { max-width: 1160px; margin: 0 auto; padding-inline: var(--mm-space-5); }
+
+.w-nav { display: flex; align-items: center; gap: var(--mm-space-5); min-height: 76px; }
+.w-nav__links { display: flex; gap: var(--mm-space-5); margin-left: auto; font-weight: 600; font-size: 16px; }
+.w-nav__links a { color: var(--mm-ink); text-decoration: none; }
+.w-nav__links a:hover { color: var(--mm-moss); }
+.w-nav .mm-button { margin-left: auto; }
+.w-nav__links + .mm-button { margin-left: 0; }
+
+.w-home { color: inherit; text-decoration: none; }
+.w-logo { font-size: 17px; }
+.w-logo .mm-logo__mark { width: 40px; }
+.w-logo .mm-logo__word { height: 12px; }
+.w-foot .w-logo { font-size: 16px; }
+.w-foot .w-logo .mm-logo__mark { width: 36px; }
+.w-foot .w-logo .mm-logo__word { height: 11px; }
+
+.w-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--mm-space-7); align-items: center; padding-block: var(--mm-space-7) 88px; }
+.w-stack { display: grid; gap: var(--mm-space-5); justify-items: start; }
+.w-stack--tight { gap: var(--mm-space-4); }
+.w-lead { font-size: 20px; line-height: 1.55; color: var(--mm-muted); max-width: 34em; margin: 0; text-wrap: pretty; }
+
+.w-invite { display: grid; gap: var(--mm-space-2); justify-items: start; }
+
+.w-shot { background: var(--mm-sand); border-radius: 28px; padding: var(--mm-space-5); }
+.w-shot__screen { max-width: 420px; margin: 0 auto; border-radius: var(--mm-radius-l); overflow: hidden; box-shadow: var(--mm-shadow); border: 1px solid var(--mm-line); }
+.w-shot__body { padding: var(--mm-space-4); display: grid; gap: var(--mm-space-4); }
+
+.w-section { padding-block: 88px; display: grid; gap: var(--mm-space-6); }
+.w-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--mm-space-5); }
+
+.w-feature { display: grid; gap: var(--mm-space-3); align-content: start; }
+.w-feature__demo { background: var(--mm-card); border: 1px solid var(--mm-line); border-radius: var(--mm-radius-m); padding: var(--mm-space-4); height: 148px; overflow: hidden; display: flex; align-items: center; flex-wrap: wrap; align-content: center; gap: var(--mm-space-2); }
+.w-feature__demo--text { font-size: 17px; line-height: 1.5; flex-direction: column; align-items: flex-start; justify-content: center; flex-wrap: nowrap; gap: 10px; }
+.w-feature__demo--doc { flex-wrap: nowrap; gap: var(--mm-space-3); }
+.w-doc { display: grid; gap: 2px; flex: 1; min-width: 0; }
+.w-doc strong { font-size: 16px; }
+.w-doc span, .w-doc__icon { color: var(--mm-muted); }
+.w-doc span { font-size: 14px; }
+.w-doc__icon { display: inline-flex; }
+.w-feature h3, .w-step h3 { margin: var(--mm-space-2) 0 0; font-size: var(--mm-text-h); line-height: 1.3; }
+.w-feature p, .w-step p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--mm-muted); text-wrap: pretty; }
+/* Demo-Chips sind Illustration, keine Bedienelemente */
+.w-feature__demo .mm-phase-chip, .w-shot .mm-source { cursor: default; }
+
+.w-band { background: var(--mm-sand); }
+.w-step { display: grid; gap: var(--mm-space-2); align-content: start; }
+.w-step__n { width: 48px; height: 48px; border-radius: 999px; background: var(--mm-card); border: 2px solid var(--mm-line); display: grid; place-items: center; font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
+
+.w-cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--mm-space-7); align-items: center; }
+
+.w-foot { border-top: 1px solid var(--mm-line); padding-block: var(--mm-space-6) var(--mm-space-7); display: flex; gap: var(--mm-space-7); flex-wrap: wrap; font-size: 15px; }
+.w-foot__brand { display: grid; gap: var(--mm-space-3); margin-right: auto; max-width: 360px; color: var(--mm-muted); }
+.w-foot h2 { margin: 0 0 var(--mm-space-2); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
+.w-foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+
+/* Rechtstexte */
+.w-legal { max-width: var(--mm-measure); padding-block: var(--mm-space-7) 88px; display: grid; gap: var(--mm-space-5); }
+.w-legal h2 { margin: var(--mm-space-4) 0 0; font-size: var(--mm-text-h); line-height: 1.3; }
+.w-legal p { margin: 0; }
+
+@media (max-width: 900px) {
+  .w-hero, .w-cta { grid-template-columns: minmax(0, 1fr); gap: var(--mm-space-6); padding-top: var(--mm-space-5); }
+  .w-grid3 { grid-template-columns: minmax(0, 1fr); }
+  .w-nav__links { display: none; }
+  .w-nav__links + .mm-button { margin-left: auto; }
+  .w-section { padding-block: 64px; }
+}
+@media (max-width: 480px) {
+  .w-wrap { padding-inline: var(--mm-space-4); }
+  .w-shot { padding: var(--mm-space-3); }
+}

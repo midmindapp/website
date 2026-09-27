@@ -1,0 +1,19 @@
+/* MidMind Typografie
+ * Atkinson Hyperlegible Next für alles; Young Serif nur Website und Begrüßungen.
+ * Antworttext nie kleiner als 18 px.
+ */
+:root {
+  --mm-font: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mm-font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --mm-font-display: "Young Serif", Georgia, "Times New Roman", serif;
+  --mm-text-small: 15px;
+  --mm-text-body: 18px;    /* Antworten: nie kleiner */
+  --mm-text-lead: 19px;    /* Kurzantwort */
+  --mm-text-h: 22px;
+  --mm-leading: 1.6;
+  --mm-measure: 68ch;
+}
+
+/* Textgröße, gesetzt von <MidMindRoot textSize> */
+[data-mm-text="large"] { --mm-text-body: 20px; --mm-text-lead: 21px; --mm-text-small: 16px; --mm-text-h: 24px; }
+[data-mm-text="xlarge"] { --mm-text-body: 22px; --mm-text-lead: 24px; --mm-text-small: 18px; --mm-text-h: 26px; }

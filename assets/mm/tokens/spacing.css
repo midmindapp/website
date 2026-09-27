@@ -1,0 +1,17 @@
+/* MidMind Abstände, Radien, Tap-Größe */
+:root {
+  --mm-space-1: 4px;
+  --mm-space-2: 8px;
+  --mm-space-3: 12px;
+  --mm-space-4: 16px;
+  --mm-space-5: 24px;
+  --mm-space-6: 32px;
+  --mm-space-7: 48px;
+
+  --mm-radius-s: 10px;
+  --mm-radius-m: 14px;
+  --mm-radius-l: 22px;
+  --mm-radius-pill: 999px;
+
+  --mm-tap: 48px;          /* Mindesthöhe für alles Antippbare */
+}

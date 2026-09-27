@@ -1,207 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de" class="mm-root" data-mm-theme="system">
 <head>
-    <title>Midind – Der intelligente Hebammen-Assistent</title>
-
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Midmind">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Nunito:400,600,700" rel="stylesheet">
-
-    <!-- FontAwesome CSS-->
-	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/flickity/flickity.min.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MidMind – Der intelligente Begleiter für Hebammen</title>
+  <meta name="description" content="MidMind beantwortet fachliche Fragen zu Schwangerschaft, Geburt und Wochenbett – kurz, evidenzbasiert und mit Literaturverweisen. Jetzt Einladung zur Testphase anfragen.">
+  <meta property="og:title" content="MidMind – Der intelligente Begleiter für Hebammen">
+  <meta property="og:description" content="Frage stellen, direkt Antwort bekommen – inklusive Literaturverweisen zur Vertiefung.">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/mm/styles.css">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-
 <body>
-    <header class="header">
+  <header class="w-wrap w-nav">
+    <a class="w-home" href="./" aria-label="MidMind – Startseite">
+      <span class="mm-logo w-logo">
+        <svg class="mm-logo__mark" viewBox="0 0 552 479" aria-hidden="true"><use href="assets/brand.svg#mark"/></svg>
+        <svg class="mm-logo__word" viewBox="0 0 656 124" aria-hidden="true"><use href="assets/brand.svg#word"/></svg>
+      </span>
+    </a>
+    <nav class="w-nav__links" aria-label="Seitennavigation">
+      <a href="#funktionen">Das erwartet dich</a>
+      <a href="#testphase">Testphase</a>
+    </nav>
+    <a class="mm-button mm-button--secondary mm-button--sm" href="#einladung">Einladung anfragen</a>
+  </header>
 
-        <div class="branding">
+  <main>
+    <section class="w-wrap w-hero">
+      <div class="w-stack">
+        <h1 class="mm-display mm-display--xl">Der intelligente Begleiter für Hebammen.</h1>
+        <p class="w-lead">Fragen im Wochenbett? Mit MidMind gibt es kein Wälzen von Literatur mehr. Frage stellen und direkt Antwort bekommen – inklusive Literaturverweisen zur Vertiefung.</p>
+        <div class="w-invite">
+          <a class="mm-button mm-button--primary" href="mailto:hallo@midmind.de?subject=Einladung%20zur%20Testphase&amp;body=Hallo%20MidMind-Team%2C%0A%0Aich%20m%C3%B6chte%20an%20der%20Testphase%20teilnehmen.%0A%0AName%3A%0AArbeitsbereich%20%28z.%20B.%20freiberuflich%2C%20Klinik%29%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Einladung anfragen</a>
+          <span class="mm-field__hint">Öffnet dein E-Mail-Programm. Oder schreib direkt an <a href="mailto:hallo@midmind.de">hallo@midmind.de</a>.</span>
+        </div>
+      </div>
 
-            <div class="container position-relative">
+      <figure class="w-shot" style="margin:0" aria-label="Beispiel einer Antwort in MidMind">
+        <div class="w-shot__screen">
+          <div class="mm-appbar">
+            <div class="mm-appbar__slot">
+              <span class="mm-icon-button" aria-hidden="true"><svg class="mm-icon" width="22" height="22"><use href="assets/brand.svg#chevronLeft"/></svg></span>
+            </div>
+            <div class="mm-appbar__title">Trinkmenge 9. Lebenstag</div>
+            <div class="mm-appbar__slot"><span class="mm-badge mm-badge--sage mm-badge--sm">Wochenbett</span></div>
+          </div>
+          <div class="w-shot__body">
+            <div class="mm-question">Wieviel Milch sollte ein 9&nbsp;Tage alter Säugling trinken?</div>
+            <article class="mm-answer">
+              <div class="mm-answer__summary">
+                <span class="mm-answer__label">Kurzantwort</span>
+                <p class="mm-answer__summary-text">Etwa <strong class="mm-value">1/6&nbsp;des Körpergewichts</strong> pro Tag, verteilt auf <strong class="mm-value">6&#8288;–&#8288;10&nbsp;Mahlzeiten</strong>.</p>
+              </div>
+              <table class="mm-facts">
+                <caption>Beispiel: 3.600&nbsp;g</caption>
+                <tbody>
+                  <tr><th scope="row">pro Tag</th><td>≈&nbsp;600&nbsp;ml</td></tr>
+                  <tr><th scope="row">pro Mahlzeit</th><td>60–100&nbsp;ml</td></tr>
+                </tbody>
+              </table>
+              <div class="mm-sources">
+                <span class="mm-source"><span class="mm-source__n" aria-hidden="true">1</span>AWMF 024-005</span>
+                <span class="mm-source"><span class="mm-source__n" aria-hidden="true">2</span>DHV Stillempfehlung</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </figure>
+    </section>
 
-				<nav class="navbar navbar-expand-lg" >
-                    <h1 class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon" src="assets/images/midmind-icon.png" alt="logo"> <span class="logo-text">MidMind</span></a></h1>
+    <section id="funktionen" class="w-wrap w-section">
+      <h2 class="mm-display mm-display--lg">Das erwartet dich</h2>
+      <div class="w-grid3">
+        <div class="w-feature">
+          <div class="w-feature__demo" aria-hidden="true">
+            <span class="mm-phase-chip"><span class="mm-phase-chip__dot" style="background:var(--mm-phase-schwangerschaft)"></span>Schwangerschaft</span>
+            <span class="mm-phase-chip"><span class="mm-phase-chip__dot" style="background:var(--mm-phase-geburt)"></span>Geburt</span>
+            <span class="mm-phase-chip" aria-pressed="true"><span class="mm-phase-chip__dot" style="background:var(--mm-phase-wochenbett)"></span>Wochenbett</span>
+          </div>
+          <h3>Fachspezifisches Wissen</h3>
+          <p>Fundiertes Wissen rund um Schwangerschaft, Geburt und Wochenbett auf Basis aktueller Fachliteratur – präzise Antworten, jederzeit und evidenzbasiert.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature__demo w-feature__demo--text" aria-hidden="true">
+            <span>Ab dem 8.&nbsp;Lebenstag etwa ein Sechstel des Körpergewichts.<sup class="mm-ref">1</sup></span>
+            <div class="mm-sources"><span class="mm-source"><span class="mm-source__n">1</span>AWMF 024-005</span></div>
+          </div>
+          <h3>Antwort zuerst. Mit Quelle.</h3>
+          <p>Oben steht die Kurzantwort mit den wichtigen Werten. Darunter die Erklärung und die Literaturverweise zum Nachlesen.</p>
+        </div>
+        <div class="w-feature">
+          <div class="w-feature__demo w-feature__demo--doc" aria-hidden="true">
+            <span class="w-doc__icon"><svg class="mm-icon" width="22" height="22"><use href="assets/brand.svg#book"/></svg></span>
+            <span class="w-doc"><strong>Vaginale Geburt am Termin</strong><span>AWMF 015-083</span></span>
+            <span class="mm-badge mm-badge--ok mm-badge--sm">S3</span>
+          </div>
+          <h3>Leitlinien zum Nachlesen</h3>
+          <p>Die S3-Leitlinien, auf die sich MidMind stützt, liegen als PDF bereit – übersichtlich an einem Ort.</p>
+        </div>
+      </div>
+    </section>
 
-					<!-- // Free Version ONLY -->
-					<!--
-					<ul class="social-list list-inline mb-0 position-absolute">
-			            <li class="list-inline-item"><a class="text-dark" href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
-		            </ul>-->
-					<!--//social-list-->
+    <section id="testphase" class="w-band">
+      <div class="w-wrap w-section">
+        <h2 class="mm-display mm-display--lg">So kommst du in die Testphase</h2>
+        <ol class="w-grid3" style="list-style:none;margin:0;padding:0">
+          <li class="w-step"><span class="w-step__n" aria-hidden="true">1</span><h3>Einladung anfragen</h3><p>Schreib uns eine kurze E-Mail. Die Testphase ist auf eine kleine Gruppe von Hebammen begrenzt.</p></li>
+          <li class="w-step"><span class="w-step__n" aria-hidden="true">2</span><h3>Zugang erhalten</h3><p>Sobald ein Platz frei ist, schicken wir dir deinen persönlichen Zugang per E-Mail.</p></li>
+          <li class="w-step"><span class="w-step__n" aria-hidden="true">3</span><h3>Fragen stellen</h3><p>Auf dem Smartphone beim Hausbesuch oder am Rechner. Dein Feedback fließt direkt in MidMind ein.</p></li>
+        </ol>
+      </div>
+    </section>
 
-				</nav>
-            </div><!--//container-->
-        </div><!--//branding-->
-    </header><!--//header-->
+    <section id="einladung" class="w-wrap w-section w-cta">
+      <div class="w-stack w-stack--tight">
+        <h2 class="mm-display mm-display--lg">Bereit, fundiertes Fachwissen jederzeit abrufbar zu haben?</h2>
+        <p class="w-lead">MidMind ist dein persönlicher KI-Assistent für Hebammen. Sichere dir jetzt einen Platz in der geschlossenen Testphase.</p>
+      </div>
+      <div class="w-invite">
+        <a class="mm-button mm-button--primary" href="mailto:hallo@midmind.de?subject=Einladung%20zur%20Testphase&amp;body=Hallo%20MidMind-Team%2C%0A%0Aich%20m%C3%B6chte%20an%20der%20Testphase%20teilnehmen.%0A%0AName%3A%0AArbeitsbereich%20%28z.%20B.%20freiberuflich%2C%20Klinik%29%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Einladung anfragen</a>
+        <span class="mm-field__hint">Öffnet dein E-Mail-Programm. Oder schreib direkt an <a href="mailto:hallo@midmind.de">hallo@midmind.de</a>.</span>
+      </div>
+    </section>
+  </main>
 
-
-    <section class="hero-section">
-	    <div class="container">
-		    <div class="row figure-holder">
-			    <div class="col-12 col-md-6 pt-3 pt-md-4">
-				    <h2 class="site-headline font-weight-bold mt-lg-5 pt-lg-5">Der intelligente Begleiter für Hebammen.</h2>
-				    <div class="site-tagline mb-3">
-						Fragen im Wochenbett? Mit MidMind gibt es kein wälzen von Literatur mehr.
-						Frage stellen und direkt Antwort bekommen. Inklusive Literaturverweise zur
-						Vertiefung.
-					</div>
-				    <div class="cta-btns">
-					    <div class="mb-4"><a class="btn btn-primary font-weight-bold theme-btn disabled" href="/">Geschlossene Testphase</a></div>
-						<!--
-					    <ul class="app-stores list-unstyled list-inline mx-auto mx-md-0 d-inline-block">
-						    <li class="list-inline-item me-3"><a href="#"><img class="ios" src="assets/images/appstore-apple.svg" alt="app-store"></a></li>
-						    <li class="list-inline-item"><a href="#"><img class="android" src="assets/images/appstore-android.svg" alt="google play"></a></li>
-					    </ul>
-						-->
-				    </div>
-			    </div>
-		    </div><!--//row-->
-	    </div>
-    </section><!--//hero-section-->
-
-
-    <section class="features-section py-5">
-	    <div class="container py-lg-5 position-relative">
-		    <h3 class="mb-3 text-center font-weight-bold section-heading">Das erwartet Dich</h3>
-		    <div class="row">
-			    <div class="col-12 col-md-6 col-xl-5 order-md-2 pr-xl-3 d-none d-md-block">
-				    <img class="product-figure product-figure-2 img-fluid" src="assets/images/product-figure-2.png" alt="" />
-			    </div>
-			    <div class="col-12 col-md-6 col-xl-5 order-md-1 offset-xl-1 pt-xl-5">
-				    <div class="card rounded border-0 shadow-lg  mb-5">
-					    <div class="card-body p-4">
-							<h5 class="card-title"><i class="fas fa-brain me-2 me-lg-3 text-primary fa-lg fa-fw"></i>Fachspezifisches Wissen</h5>
-							<p class="card-text">
-								Fundiertes, fachspezifisches Wissen rund um Schwangerschaft, Geburt und Wochenbett
-								auf Basis aktueller Fachliteratur.
-								Hebammen erhalten präzise Antworten auf fachliche Fragen – jederzeit und evidenzbasiert.
-							</p>
-							<!--
-							<a class="more-link" href="#" >Learn more <span class="more-arrow">&rarr;</span></a>
-							-->
-						</div>
-				    </div><!--//card-->
-
-				    <div class="card rounded border-0 shadow-lg">
-					    <div class="card-body p-4">
-							<h5 class="card-title"><i class="far fa-address-book me-2 me-lg-3 text-primary fa-lg fa-"></i>Dein Wissen. Sortiert.</h5>
-							<p class="card-text">
-								Fundiertes Fachwissen übersichtlich und leicht zugänglich. Notizen, Leitlinien und Literaturquellen
-								werden automatisch geordnet – so findest du alles Wichtige im Handumdrehen.
-							</p>
-							<!--
-							<a class="more-link" href="#" >Learn more <span class="more-arrow">&rarr;</span></a>
-							-->
-						</div>
-				    </div><!--//card-->
-			    </div>
-
-		    </div>
-	    </div><!--//container-->
-
-    </section><!--//features-section-->
-
-    <section class="cta-section py-5 theme-bg-secondary text-center">
-	    <div class="container">
-		    <h3 class="text-white font-weight-bold mb-3">Bereit fundiertes Fachwissen jederzeit abrufbar zu haben?</h3>
-		    <div class="text-white mx-auto single-col-max-width section-intro">
-				Starte jetzt mit Midmind, deinem persönlichen KI-Assistenten für Hebammen – und greife jederzeit auf
-				aktuelles, evidenzbasiertes Wissen zu. Jetzt ausprobieren und smarter arbeiten!
-			</div>
-		    <a class="btn theme-btn theme-btn-ghost theme-btn-on-bg mt-4 disabled" href="#">Geschlossene Testphase</a>
-	    </div>
-    </section><!--//cta-section-->
-
-
-    <footer class="footer theme-bg-primary">
-	    <div class="container py-5 mb-3">
-		    <div class="row">
-				<div class="footer-col col-6 col-lg-3">
-				    <h4 class="col-heading">Legal</h4>
-				    <ul class="list-unstyled">
-					    <li><a class="text-link" href="#">Privacy</a></li>
-					    <li><a class="text-link" href="#">Terms of Services</a></li>
-				    </ul>
-			    </div><!--//footer-col-->
-			    <div class="footer-col col-6 col-lg-3">
-					<!--
-				    <h4 class="col-heading">About Nova</h4>
-				    <ul class="list-unstyled">
-					    <li><a class="text-link" href="#">Our Story</a></li>
-					    <li><a class="text-link" href="#">Pricing</a></li>
-					    <li><a class="text-link" href="#">Contact</a></li>
-					    <li><a class="text-link" href="#">Jobs</a></li>
-				    </ul>
-					-->
-			    </div><!--//footer-col-->
-			    <div class="footer-col col-6 col-lg-3">
-					<!--
-				    <h4 class="col-heading">Resources</h4>
-				    <ul class="list-unstyled">
-					    <li><a class="text-link" href="#">FAQs</a></li>
-					    <li><a class="text-link" href="#">Blog</a></li>
-					    <li><a class="text-link" href="#">Support</a></li>
-					    <li><a class="text-link" href="#">Developer APIs</a></li>
-				    </ul>
-					-->
-			    </div><!--//footer-col-->
-			    <div class="footer-col col-6 col-lg-3">
-				    <h4 class="col-heading">Fragen?</h4>
-					<!--
-				    <ul class="social-list list-unstyled mb-0">
-					    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-youtube fa-fw"></i></a></li>
-		            </ul>
-					-->
-					<!--//social-list-->
-					<!--
-		            <div class="mb-2">
-			            Company Name<br>
-			            2419 Locust View Drive <br>
-			            San Francisco, CA, 94143
-		            </div>
-					-->
-		            <div>
-			            <a class="text-link" href="#">hallo@midmind.de</a>
-			        </div>
-
-			    </div><!--//footer-col-->
-		    </div><!--//row-->
-	    </div><!--//container-->
-	    <div class="container">
-		    <hr>
-	    </div>
-	    <div class="footer-bottom text-center pb-5">
-	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-	    </div>
-
-    </footer>
-
-
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/flickity/flickity.pkgd.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-
-
+  <footer class="w-wrap w-foot">
+    <div class="w-foot__brand">
+      <span class="mm-logo w-logo">
+        <svg class="mm-logo__mark" viewBox="0 0 552 479" aria-hidden="true"><use href="assets/brand.svg#mark"/></svg>
+        <svg class="mm-logo__word" viewBox="0 0 656 124" role="img" aria-label="MidMind"><use href="assets/brand.svg#word"/></svg>
+      </span>
+      <span>MidMind ersetzt keine ärztliche Entscheidung.</span>
+    </div>
+    <div><h2>Rechtliches</h2><ul><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="impressum.html">Impressum</a></li></ul></div>
+    <div><h2>Fragen?</h2><ul><li><a href="mailto:hallo@midmind.de">hallo@midmind.de</a></li></ul></div>
+  </footer>
 </body>
 </html>

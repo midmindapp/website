@@ -1,0 +1,135 @@
+/* MidMind Farben
+ * Tag ist der Standard. Nachtmodus über data-mm-theme="night" auf einem Vorfahren
+ * (meist <MidMindRoot theme="night">), oder "system" folgt prefers-color-scheme.
+ * Pastell (sage, apricot, malve) nur als Fläche – nie als Textfarbe.
+ * Signal (crit, warn, ok) immer mit Symbol und Wort.
+ */
+:root {
+  color-scheme: light;
+  --mm-paper: #F8F3EF;
+  --mm-sand: #EFE6DE;
+  --mm-card: #FFFCF9;
+  --mm-line: #E2D6CB;
+  --mm-ink: #2B2220;
+  --mm-muted: #5C504A;
+  --mm-moss: #3F5A45;
+  --mm-on-moss: #F8F3EF;
+  --mm-sage: #C9D8C3;
+  --mm-apricot: #F4D2B6;
+  --mm-malve: #DCC9D6;
+  --mm-on-apricot: #2B2220;
+  --mm-crit: #8E2620;
+  --mm-crit-bg: #F8DDD7;
+  --mm-warn: #6E5010;
+  --mm-warn-bg: #F6E7C1;
+  --mm-ok: #2F5236;
+  --mm-ok-bg: #DCE8D6;
+  --mm-focus: #3F5A45;
+  --mm-shadow: 0 1px 2px rgba(60, 40, 30, .06), 0 6px 18px rgba(60, 40, 30, .07);
+  /* Semantische Aliase – zeigen auf die Basis-Tokens, folgen dem Nachtmodus */
+  --mm-surface-page: var(--mm-paper);
+  --mm-surface-2: var(--mm-sand);
+  --mm-surface-card: var(--mm-card);
+  --mm-border: var(--mm-line);
+  --mm-text: var(--mm-ink);
+  --mm-text-muted: var(--mm-muted);
+  --mm-action: var(--mm-moss);
+  --mm-on-action: var(--mm-on-moss);
+  --mm-summary-bg: var(--mm-sage);
+  --mm-value-bg: var(--mm-apricot);
+  --mm-source-bg: var(--mm-malve);
+  --mm-phase-schwangerschaft: var(--mm-apricot);
+  --mm-phase-geburt: var(--mm-malve);
+  --mm-phase-wochenbett: var(--mm-sage);
+}
+
+[data-mm-theme="day"] {
+  color-scheme: light;
+  --mm-paper: #F8F3EF;
+  --mm-sand: #EFE6DE;
+  --mm-card: #FFFCF9;
+  --mm-line: #E2D6CB;
+  --mm-ink: #2B2220;
+  --mm-muted: #5C504A;
+  --mm-moss: #3F5A45;
+  --mm-on-moss: #F8F3EF;
+  --mm-sage: #C9D8C3;
+  --mm-apricot: #F4D2B6;
+  --mm-malve: #DCC9D6;
+  --mm-on-apricot: #2B2220;
+  --mm-crit: #8E2620;
+  --mm-crit-bg: #F8DDD7;
+  --mm-warn: #6E5010;
+  --mm-warn-bg: #F6E7C1;
+  --mm-ok: #2F5236;
+  --mm-ok-bg: #DCE8D6;
+  --mm-focus: #3F5A45;
+  --mm-shadow: 0 1px 2px rgba(60, 40, 30, .06), 0 6px 18px rgba(60, 40, 30, .07);
+}
+
+[data-mm-theme="night"] {
+  color-scheme: dark;
+  --mm-paper: #1C1815;
+  --mm-sand: #28221E;
+  --mm-card: #231E1A;
+  --mm-line: #3A322C;
+  --mm-ink: #EFE5D8;
+  --mm-muted: #BFB2A4;
+  --mm-moss: #A9C4A4;
+  --mm-on-moss: #1C1815;
+  --mm-sage: #34453A;
+  --mm-apricot: #E6B894;
+  --mm-malve: #3E3240;
+  --mm-crit: #F2A197;
+  --mm-crit-bg: #3B1F1B;
+  --mm-warn: #EACB84;
+  --mm-warn-bg: #3A2F17;
+  --mm-ok: #B4D1AE;
+  --mm-ok-bg: #1F2E21;
+  --mm-focus: #E6B894;
+  --mm-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 18px rgba(0, 0, 0, .25);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-mm-theme="system"] {
+    color-scheme: dark;
+    --mm-paper: #1C1815;
+    --mm-sand: #28221E;
+    --mm-card: #231E1A;
+    --mm-line: #3A322C;
+    --mm-ink: #EFE5D8;
+    --mm-muted: #BFB2A4;
+    --mm-moss: #A9C4A4;
+    --mm-on-moss: #1C1815;
+    --mm-sage: #34453A;
+    --mm-apricot: #E6B894;
+    --mm-malve: #3E3240;
+    --mm-crit: #F2A197;
+    --mm-crit-bg: #3B1F1B;
+    --mm-warn: #EACB84;
+    --mm-warn-bg: #3A2F17;
+    --mm-ok: #B4D1AE;
+    --mm-ok-bg: #1F2E21;
+    --mm-focus: #E6B894;
+    --mm-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 18px rgba(0, 0, 0, .25);
+  }
+}
+
+/* Aliase auf jedem Theme-Scope neu auflösen, damit sie dem Nachtmodus folgen */
+[data-mm-theme] {
+  /* Semantische Aliase – zeigen auf die Basis-Tokens, folgen dem Nachtmodus */
+  --mm-surface-page: var(--mm-paper);
+  --mm-surface-2: var(--mm-sand);
+  --mm-surface-card: var(--mm-card);
+  --mm-border: var(--mm-line);
+  --mm-text: var(--mm-ink);
+  --mm-text-muted: var(--mm-muted);
+  --mm-action: var(--mm-moss);
+  --mm-on-action: var(--mm-on-moss);
+  --mm-summary-bg: var(--mm-sage);
+  --mm-value-bg: var(--mm-apricot);
+  --mm-source-bg: var(--mm-malve);
+  --mm-phase-schwangerschaft: var(--mm-apricot);
+  --mm-phase-geburt: var(--mm-malve);
+  --mm-phase-wochenbett: var(--mm-sage);
+}
