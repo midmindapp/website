@@ -4,7 +4,7 @@
 html, body { margin: 0; }
 body { background: var(--mm-paper); }
 a { color: var(--mm-moss); }
-a:hover { color: var(--mm-ink); }
+a:not(.mm-button):hover { color: var(--mm-ink); }
 
 .w-wrap { max-width: 1160px; margin: 0 auto; padding-inline: var(--mm-space-5); }
 
