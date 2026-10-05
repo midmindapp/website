@@ -19,9 +19,9 @@ a:hover { color: var(--mm-ink); }
 .w-logo { font-size: 17px; }
 .w-logo .mm-logo__mark { width: 40px; }
 .w-logo .mm-logo__word { height: 12px; }
-.w-foot .w-logo { font-size: 16px; }
-.w-foot .w-logo .mm-logo__mark { width: 36px; }
-.w-foot .w-logo .mm-logo__word { height: 11px; }
+.w-foot .w-logo { font-size: 16px; justify-self: start; }
+.w-foot .w-logo .mm-logo__mark { width: 56px; }
+.w-foot .w-logo .mm-logo__word { height: 13px; }
 
 .w-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--mm-space-7); align-items: center; padding-block: var(--mm-space-7) 88px; }
 .w-stack { display: grid; gap: var(--mm-space-5); justify-items: start; }
