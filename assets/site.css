@@ -28,6 +28,17 @@ a:hover { color: var(--mm-ink); }
 .w-stack--tight { gap: var(--mm-space-4); }
 .w-lead { font-size: 20px; line-height: 1.55; color: var(--mm-muted); max-width: 34em; margin: 0; text-wrap: pretty; }
 
+/* CTA-Chevron – „Learn more hover" von transitions.dev: Chevron rückt nach rechts, Schenkel spreizen sich um die Spitze. */
+.w-cta-learn { --w-learn-shift: 2px; --w-learn-spread: 8deg; --w-learn-dur: 350ms; --w-learn-ease: cubic-bezier(0.22, 1, 0.36, 1); padding-right: 16px; }
+.w-cta-learn.mm-button--sm { padding-right: 10px; }
+.w-chevron { display: inline-flex; flex: none; transform: translateX(0); transition: transform var(--w-learn-dur) var(--w-learn-ease); }
+.w-chevron svg { display: block; overflow: visible; }
+.w-chevron__arm { transform-box: view-box; transform-origin: 10px 8px; vector-effect: non-scaling-stroke; transition: transform var(--w-learn-dur) var(--w-learn-ease); }
+.w-cta-learn:is(:hover, :focus-visible) .w-chevron { transform: translateX(var(--w-learn-shift)); }
+.w-cta-learn:is(:hover, :focus-visible) .w-chevron__arm--top { transform: rotate(var(--w-learn-spread)); }
+.w-cta-learn:is(:hover, :focus-visible) .w-chevron__arm--bot { transform: rotate(calc(var(--w-learn-spread) * -1)); }
+@media (prefers-reduced-motion: reduce) { .w-chevron, .w-chevron__arm { transition: none; } }
+
 .w-invite { display: grid; gap: var(--mm-space-2); justify-items: start; }
 
 .w-shot { background: var(--mm-sand); border-radius: 28px; padding: var(--mm-space-5); }
