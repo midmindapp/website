@@ -100,7 +100,9 @@ html:has(.w-modal[open]) { overflow: hidden; }
 .w-modal__badge { margin-right: var(--mm-space-2); }
 .w-modal__close { cursor: pointer; }
 .w-modal__body { overflow: auto; padding: var(--mm-space-5); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--mm-space-4); align-content: start; }
-.w-modal__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--mm-space-4); flex-wrap: wrap; padding: var(--mm-space-4) var(--mm-space-5); border-top: 1px solid var(--mm-line); background: var(--mm-card); font-size: 16px; color: var(--mm-muted); }
+.w-modal__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--mm-space-4); padding: var(--mm-space-4) var(--mm-space-5); border-top: 1px solid var(--mm-line); background: var(--mm-card); font-size: 16px; color: var(--mm-muted); }
+.w-modal__foot > span { flex: 1; min-width: 0; }
+.w-modal__foot > .mm-button { flex: none; }
 .w-modal .mm-source { cursor: default; }
 .w-modal .mm-source:hover { border-color: var(--mm-line); }
 

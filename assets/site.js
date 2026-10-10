@@ -60,13 +60,15 @@ function callout(tone, heading, text) {
   return el;
 }
 
-/** Wie in der App (chat/Answer.tsx): eine Antwort aus allgemeinem Wissen ist als solche markiert. */
+/** Wie in der App (chat/Answer.tsx): eine Antwort aus allgemeinem Wissen ist als solche markiert, als Erstes in der Antwort. */
 const KNOWLEDGE_TITLE = 'Nicht aus der Fachliteratur beantwortet';
-const KNOWLEDGE_TEXT = 'Diese Antwort beruht auf allgemeinem Modellwissen. Bitte fachlich prüfen.';
+const KNOWLEDGE_TEXT = 'Zu dieser Frage habe ich keine passende Literatur gefunden. Stattdessen habe ich das allgemeine '
+  + 'Modellwissen zur Beantwortung genutzt. Die Gefahr des Halluzinierens ist dabei größer, deshalb sorgfältig prüfen!';
 
-/** Die Antwort in der festen Reihenfolge der AnswerCard: Notfall → Kurzantwort → Werte → Erklärung → Hinweis → Quellen. */
+/** Die Antwort in der festen Reihenfolge der AnswerCard: Hinweis (allgemeines Wissen) → Notfall → Kurzantwort → Werte → Erklärung → Quellen. */
 function answerCard({ basis, alert, summary = '', facts = [], explanation = '', sources = [] }) {
   const card = element('article', 'mm-answer');
+  if (basis === 'knowledge') card.append(callout('info', KNOWLEDGE_TITLE, KNOWLEDGE_TEXT));
   if (alert?.title && (alert.tone === 'critical' || alert.tone === 'warning')) card.append(callout(alert.tone, alert.title, alert.text ?? ''));
   const box = element('div', 'mm-answer__summary');
   box.append(element('p', 'mm-answer__summary-text', summaryMarkdown.parseInline(summary)));
@@ -91,7 +93,6 @@ function answerCard({ basis, alert, summary = '', facts = [], explanation = '', 
     const body = markdown.parse(explanation.replace(/\[\^(\d+)\]/g, '[$1](#quelle-$1)'));
     card.append(element('h4', 'mm-answer__heading', 'Erklärung'), element('div', 'mm-answer__body markdown', body));
   }
-  if (basis === 'knowledge') card.append(callout('info', KNOWLEDGE_TITLE, KNOWLEDGE_TEXT));
   if (sources.length) {
     const list = element('div', 'mm-sources');
     sources.forEach((s, i) => {
@@ -148,11 +149,8 @@ function stream(card, current) {
       dialog.removeAttribute('aria-busy');
       return;
     }
-    // Wie im Chat der App folgt das Fenster der wachsenden Antwort, solange man nicht selbst hochgescrollt hat.
-    const following = body.scrollHeight - body.scrollTop - body.clientHeight < 48;
     spans[n].classList.add('is-in');
     spans[n].closest('.w-stream-block')?.classList.add('is-in');
-    if (following) body.scrollTop = body.scrollHeight;
     timer = setTimeout(() => next(n + 1), gap);
   };
   next(0);
