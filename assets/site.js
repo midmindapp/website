@@ -251,3 +251,11 @@ dialog.querySelector('.w-modal__close').addEventListener('click', close);
 dialog.addEventListener('cancel', (e) => { e.preventDefault(); close(); });
 // Ein Klick neben das Fenster trifft den Dialog selbst.
 dialog.addEventListener('click', (e) => e.target === dialog && close());
+
+// Häufige Fragen: Jede Frage klappt ihre Antwort auf und zu, mehrere dürfen offen sein.
+document.querySelectorAll('.w-faq__q').forEach((button) => button.addEventListener('click', () => {
+  const item = button.closest('.w-faq__item');
+  const expanded = item.toggleAttribute('data-open');
+  button.setAttribute('aria-expanded', expanded);
+  item.querySelector('.w-faq__panel').inert = !expanded;
+}));
