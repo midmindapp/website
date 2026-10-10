@@ -1,7 +1,7 @@
 /* MidMind Farben
  * Tag ist der Standard. Nachtmodus über data-mm-theme="night" auf einem Vorfahren
  * (meist <MidMindRoot theme="night">), oder "system" folgt prefers-color-scheme.
- * Pastell (sage, apricot, malve) nur als Fläche – nie als Textfarbe.
+ * Pastell (sage, apricot, malve, taube) nur als Fläche – nie als Textfarbe.
  * Signal (crit, warn, ok) immer mit Symbol und Wort.
  */
 :root {
@@ -17,6 +17,7 @@
   --mm-sage: #C9D8C3;
   --mm-apricot: #F4D2B6;
   --mm-malve: #DCC9D6;
+  --mm-taube: #CBD5DE;
   --mm-on-apricot: #2B2220;
   --mm-crit: #8E2620;
   --mm-crit-bg: #F8DDD7;
@@ -41,6 +42,7 @@
   --mm-phase-schwangerschaft: var(--mm-apricot);
   --mm-phase-geburt: var(--mm-malve);
   --mm-phase-wochenbett: var(--mm-sage);
+  --mm-phase-abrechnung: var(--mm-taube);
 }
 
 [data-mm-theme="day"] {
@@ -56,6 +58,7 @@
   --mm-sage: #C9D8C3;
   --mm-apricot: #F4D2B6;
   --mm-malve: #DCC9D6;
+  --mm-taube: #CBD5DE;
   --mm-on-apricot: #2B2220;
   --mm-crit: #8E2620;
   --mm-crit-bg: #F8DDD7;
@@ -80,6 +83,7 @@
   --mm-sage: #34453A;
   --mm-apricot: #E6B894;
   --mm-malve: #3E3240;
+  --mm-taube: #2F3A44;
   --mm-crit: #F2A197;
   --mm-crit-bg: #3B1F1B;
   --mm-warn: #EACB84;
@@ -104,6 +108,8 @@
     --mm-sage: #34453A;
     --mm-apricot: #E6B894;
     --mm-malve: #3E3240;
+    --mm-taube: #2F3A44;
+  --mm-taube: #2F3A44;
     --mm-crit: #F2A197;
     --mm-crit-bg: #3B1F1B;
     --mm-warn: #EACB84;
@@ -132,4 +138,5 @@
   --mm-phase-schwangerschaft: var(--mm-apricot);
   --mm-phase-geburt: var(--mm-malve);
   --mm-phase-wochenbett: var(--mm-sage);
+  --mm-phase-abrechnung: var(--mm-taube);
 }
