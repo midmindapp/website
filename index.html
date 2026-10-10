@@ -13,6 +13,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="assets/mm/styles.css">
   <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/site.js"></script>
 </head>
 <body>
   <header class="w-wrap w-nav">
@@ -24,7 +25,8 @@
     </a>
     <nav class="w-nav__links" aria-label="Seitennavigation">
       <a href="#funktionen">Das erwartet dich</a>
-      <a href="#testphase">Testphase</a>
+      <a href="#beispiele">Beispiele</a>
+      <a href="#warum">Warum kostenlos</a>
     </nav>
     <a class="mm-button mm-button--secondary mm-button--sm w-cta-learn" href="#einladung">Einladung anfragen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </header>
@@ -105,14 +107,67 @@
       </div>
     </section>
 
-    <section id="testphase" class="w-band">
+    <section id="beispiele" class="w-band">
       <div class="w-wrap w-section">
-        <h2 class="mm-display mm-display--lg">So kommst du in die Testphase</h2>
-        <ol class="w-grid3" style="list-style:none;margin:0;padding:0">
-          <li class="w-step"><span class="w-step__n" aria-hidden="true">1</span><h3>Einladung anfragen</h3><p>Schreib uns eine kurze E-Mail. Die Testphase ist auf eine kleine Gruppe von Hebammen begrenzt.</p></li>
-          <li class="w-step"><span class="w-step__n" aria-hidden="true">2</span><h3>Zugang erhalten</h3><p>Sobald ein Platz frei ist, schicken wir dir deinen persönlichen Zugang per E-Mail.</p></li>
-          <li class="w-step"><span class="w-step__n" aria-hidden="true">3</span><h3>Fragen stellen</h3><p>Auf dem Smartphone beim Hausbesuch oder am Rechner. Dein Feedback fließt direkt in MidMind ein.</p></li>
-        </ol>
+        <div class="w-stack w-stack--snug">
+          <h2 class="mm-display mm-display--lg">Frag so, wie du denkst.</h2>
+          <p class="w-lead">Ein Stichwort beim Hausbesuch, eine konkrete Situation oder eine Frage fürs Examen – MidMind versteht alle.</p>
+        </div>
+        <div class="w-grid3">
+          <button type="button" class="w-ex" data-preview="milchspendereflex" data-question="Schmerzhafter Milchspendereflex" data-phase="wochenbett" aria-haspopup="dialog">
+            <span class="w-ex__use">Stichwort</span>
+            <span class="w-ex__q">„Schmerzhafter Milchspendereflex“</span>
+            <span class="w-ex__foot"><span class="mm-badge mm-badge--sage mm-badge--sm">Wochenbett</span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+          <button type="button" class="w-ex" data-preview="bilirubin-tag-4" data-question="Ab welchem Bilirubinwert muss ein reifes Neugeborenes am 4. Lebenstag behandelt werden?" data-phase="wochenbett" aria-haspopup="dialog">
+            <span class="w-ex__use">Werte und Grenzen</span>
+            <span class="w-ex__q">„Ab welchem Bilirubinwert muss ein reifes Neugeborenes am 4.&nbsp;Lebenstag behandelt werden?“</span>
+            <span class="w-ex__foot"><span class="mm-badge mm-badge--sage mm-badge--sm">Wochenbett</span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+          <button type="button" class="w-ex" data-preview="postpartale-blutung" data-question="Was muss ich als Hebamme bei einer verstärkten Blutung nach der Geburt sofort tun?" data-phase="geburt" aria-haspopup="dialog">
+            <span class="w-ex__use">Konkrete Situation</span>
+            <span class="w-ex__q">„Was muss ich als Hebamme bei einer verstärkten Blutung nach der Geburt sofort tun?“</span>
+            <span class="w-ex__foot"><span class="mm-badge mm-badge--malve mm-badge--sm">Geburt</span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+          <button type="button" class="w-ex" data-preview="abrechnung-dammnaht" data-question="Bis zu welchem Tag darf ich das Ziehen von Fäden der Dammnaht abrechnen?" data-phase="abrechnung" aria-haspopup="dialog">
+            <span class="w-ex__use">Abrechnung</span>
+            <span class="w-ex__q">„Bis zu welchem Tag darf ich das Ziehen von Fäden der Dammnaht abrechnen?“</span>
+            <span class="w-ex__foot"><span class="mm-badge mm-badge--taube mm-badge--sm">Abrechnung</span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+          <button type="button" class="w-ex" data-preview="gewichtsabnahme-erklaeren" data-question="Wie erkläre ich Eltern, wie viel Gewichtsabnahme beim Neugeborenen in den ersten Tagen normal ist?" data-phase="wochenbett" aria-haspopup="dialog">
+            <span class="w-ex__use">Für Eltern erklärt</span>
+            <span class="w-ex__q">„Wie erkläre ich Eltern, wie viel Gewichtsabnahme beim Neugeborenen in den ersten Tagen normal ist?“</span>
+            <span class="w-ex__foot"><span class="mm-badge mm-badge--sage mm-badge--sm">Wochenbett</span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+          <button type="button" class="w-ex" data-preview="leopold-handgriffe" data-question="Wie führe ich die Leopold-Handgriffe durch und was beurteile ich mit jedem Handgriff?" aria-haspopup="dialog">
+            <span class="w-ex__use">Lernen fürs Examen</span>
+            <span class="w-ex__q">„Wie führe ich die Leopold-Handgriffe durch und was beurteile ich mit jedem Handgriff?“</span>
+            <span class="w-ex__foot"><span></span><span class="w-ex__more">Antwort ansehen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="warum" class="w-why">
+      <div class="w-wrap w-section w-section--roomy">
+        <h2 class="mm-display mm-display--lg w-why__title">Hebammen tragen die Geburtshilfe. Die Digitalisierung hat sie vergessen.</h2>
+        <div class="w-why__reasons">
+          <div><h3>Übersehen</h3><p>Digitalisierung im Gesundheitswesen denkt an Kliniken, Praxen und Kassen. Hebammen kommen darin kaum vor – obwohl sie Familien vom ersten Ultraschall bis weit ins Wochenbett begleiten.</p></div>
+          <div><h3>Knapp kalkuliert</h3><p>Die meisten Hebammen arbeiten freiberuflich. Nach Haftpflicht, Fahrtkosten und Abrechnung bleibt wenig übrig. Teure Software-Abos fressen schnell den Rest.</p></div>
+          <div><h3>Darum kostenlos</h3><p>Gutes Fachwissen darf keine Frage des Budgets sein. MidMind ist für Hebammen und Hebammenstudierende kostenlos – ohne Abo und ohne Werbung.</p></div>
+        </div>
+        <div class="w-stand">
+          <div class="w-stack w-stack--snug">
+            <span class="w-why__eyebrow">Wofür wir einstehen</span>
+            <p class="mm-display mm-display--md">Mehr Hebammen. Mehr Zeit. Mehr Anerkennung.</p>
+          </div>
+          <ul>
+            <li><svg class="mm-icon" width="20" height="20" aria-hidden="true"><use href="assets/brand.svg#check"/></svg><div><strong>Eine Hebamme pro Geburt</strong><span>1:1-Betreuung unter der Geburt als Standard, nicht als Glücksfall.</span></div></li>
+            <li><svg class="mm-icon" width="20" height="20" aria-hidden="true"><use href="assets/brand.svg#check"/></svg><div><strong>Faire Vergütung</strong><span>Freiberufliche Arbeit muss sich lohnen – auch nach Haftpflicht und Fahrtkosten.</span></div></li>
+            <li><svg class="mm-icon" width="20" height="20" aria-hidden="true"><use href="assets/brand.svg#check"/></svg><div><strong>Weniger Bürokratie</strong><span>Zeit gehört den Familien, nicht den Formularen.</span></div></li>
+            <li><svg class="mm-icon" width="20" height="20" aria-hidden="true"><use href="assets/brand.svg#check"/></svg><div><strong>Digitalisierung, die mitdenkt</strong><span>Werkzeuge, die für Hebammen gemacht sind – und die sie sich leisten können.</span></div></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -126,6 +181,25 @@
         <span class="mm-field__hint">Öffnet dein E-Mail-Programm. Oder schreib direkt an <a href="mailto:hallo@midmind.de">hallo@midmind.de</a>.</span>
       </div>
     </section>
+    <dialog class="w-modal" aria-labelledby="w-modal-title" data-state="closed">
+      <div class="w-modal__panel">
+        <div class="mm-appbar">
+          <div class="mm-appbar__title" id="w-modal-title"></div>
+          <div class="mm-appbar__slot">
+            <span class="mm-badge mm-badge--sm w-modal__badge" hidden></span>
+            <button type="button" class="mm-icon-button w-modal__close" aria-label="Schließen"><svg class="mm-icon" width="22" height="22" aria-hidden="true"><use href="assets/brand.svg#close"/></svg></button>
+          </div>
+        </div>
+        <div class="w-modal__body">
+          <div class="mm-question"></div>
+          <div class="w-modal__answer" aria-live="polite"></div>
+        </div>
+        <div class="w-modal__foot">
+          <span>Beispielantwort aus einem Basis-Konto. MidMind ist eine KI und macht Fehler.</span>
+          <a class="mm-button mm-button--primary w-cta-learn" href="mailto:hallo@midmind.de?subject=Einladung%20zur%20Testphase&amp;body=Hallo%20MidMind-Team%2C%0A%0Aich%20m%C3%B6chte%20an%20der%20Testphase%20teilnehmen.%0A%0AName%3A%0AArbeitsbereich%20%28z.%20B.%20freiberuflich%2C%20Klinik%29%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Einladung anfragen<span class="w-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path class="w-chevron__arm w-chevron__arm--top" d="M6 4L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="w-chevron__arm w-chevron__arm--bot" d="M10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </div>
+      </div>
+    </dialog>
   </main>
 
   <footer class="w-wrap w-foot">

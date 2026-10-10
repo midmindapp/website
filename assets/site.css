@@ -29,14 +29,15 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 .w-lead { font-size: 20px; line-height: 1.55; color: var(--mm-muted); max-width: 34em; margin: 0; text-wrap: pretty; }
 
 /* CTA-Chevron – „Learn more hover" von transitions.dev: Chevron rückt nach rechts, Schenkel spreizen sich um die Spitze. */
-.w-cta-learn { --w-learn-shift: 2px; --w-learn-spread: 8deg; --w-learn-dur: 350ms; --w-learn-ease: cubic-bezier(0.22, 1, 0.36, 1); padding-right: 16px; }
+.w-cta-learn, .w-ex { --w-learn-shift: 2px; --w-learn-spread: 8deg; --w-learn-dur: 350ms; --w-learn-ease: cubic-bezier(0.22, 1, 0.36, 1); }
+.w-cta-learn { padding-right: 16px; }
 .w-cta-learn.mm-button--sm { padding-right: 10px; }
 .w-chevron { display: inline-flex; flex: none; transform: translateX(0); transition: transform var(--w-learn-dur) var(--w-learn-ease); }
 .w-chevron svg { display: block; overflow: visible; }
 .w-chevron__arm { transform-box: view-box; transform-origin: 10px 8px; vector-effect: non-scaling-stroke; transition: transform var(--w-learn-dur) var(--w-learn-ease); }
-.w-cta-learn:is(:hover, :focus-visible) .w-chevron { transform: translateX(var(--w-learn-shift)); }
-.w-cta-learn:is(:hover, :focus-visible) .w-chevron__arm--top { transform: rotate(var(--w-learn-spread)); }
-.w-cta-learn:is(:hover, :focus-visible) .w-chevron__arm--bot { transform: rotate(calc(var(--w-learn-spread) * -1)); }
+:is(.w-cta-learn, .w-ex):is(:hover, :focus-visible) .w-chevron { transform: translateX(var(--w-learn-shift)); }
+:is(.w-cta-learn, .w-ex):is(:hover, :focus-visible) .w-chevron__arm--top { transform: rotate(var(--w-learn-spread)); }
+:is(.w-cta-learn, .w-ex):is(:hover, :focus-visible) .w-chevron__arm--bot { transform: rotate(calc(var(--w-learn-spread) * -1)); }
 @media (prefers-reduced-motion: reduce) { .w-chevron, .w-chevron__arm { transition: none; } }
 
 .w-invite { display: grid; gap: var(--mm-space-2); justify-items: start; }
@@ -57,14 +58,12 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 .w-doc span, .w-doc__icon { color: var(--mm-muted); }
 .w-doc span { font-size: 14px; }
 .w-doc__icon { display: inline-flex; }
-.w-feature h3, .w-step h3 { margin: var(--mm-space-2) 0 0; font-size: var(--mm-text-h); line-height: 1.3; }
-.w-feature p, .w-step p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--mm-muted); text-wrap: pretty; }
+.w-feature h3 { margin: var(--mm-space-2) 0 0; font-size: var(--mm-text-h); line-height: 1.3; }
+.w-feature p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--mm-muted); text-wrap: pretty; }
 /* Demo-Chips sind Illustration, keine Bedienelemente */
 .w-feature__demo .mm-phase-chip, .w-shot .mm-source { cursor: default; }
 
 .w-band { background: var(--mm-sand); }
-.w-step { display: grid; gap: var(--mm-space-2); align-content: start; }
-.w-step__n { width: 48px; height: 48px; border-radius: 999px; background: var(--mm-card); border: 2px solid var(--mm-line); display: grid; place-items: center; font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
 
 .w-cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--mm-space-7); align-items: center; }
 
@@ -73,6 +72,99 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 .w-foot h2 { margin: 0 0 var(--mm-space-2); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--mm-muted); }
 .w-foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 
+.w-stack--snug { gap: var(--mm-space-3); }
+.w-section--roomy { gap: var(--mm-space-7); }
+
+/* Beispiele („Frag so, wie du denkst.“) – jede Karte öffnet die Antwort aus der App (assets/site.js) */
+.w-ex { font: inherit; text-align: left; border: 1px solid transparent; cursor: pointer; background: var(--mm-card); border-radius: var(--mm-radius-l); padding: var(--mm-space-5); display: grid; grid-template-rows: auto 1fr auto; gap: var(--mm-space-3); color: var(--mm-ink); transition: border-color .2s; }
+.w-ex:hover { border-color: var(--mm-line); }
+.w-ex:focus-visible { outline: 2px solid var(--mm-moss); outline-offset: 2px; }
+.w-ex__use { font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--mm-moss); }
+.w-ex__q { font-size: 20px; line-height: 1.45; font-weight: 600; text-wrap: pretty; }
+.w-ex__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--mm-space-3); flex-wrap: wrap; margin-top: var(--mm-space-2); }
+.w-ex__more { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; color: var(--mm-moss); }
+
+/* Antwort-Fenster: Kopf wie die AppBar der App, darunter Frage und Antwort; Nachfragen gibt es hier nicht. */
+.w-modal { --w-stream-gap: 60ms; --w-stream-fade: 350ms; --w-stream-blur: 1px; --w-stream-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; box-sizing: border-box; padding: var(--mm-space-4);
+  background: color-mix(in oklch, var(--mm-ink), transparent 55%); color: var(--mm-ink); opacity: 0; transition: opacity .2s cubic-bezier(.22, 1, .36, 1); }
+.w-modal[open] { display: grid; place-items: center; }
+.w-modal::backdrop { background: transparent; }
+html:has(.w-modal[open]) { overflow: hidden; }
+.w-modal__panel { width: min(720px, 100%); max-height: min(820px, calc(100dvh - 32px)); display: grid; grid-template-rows: auto minmax(0, 1fr) auto; grid-template-columns: minmax(0, 1fr); background: var(--mm-paper); border-radius: var(--mm-radius-l); box-shadow: var(--mm-shadow); overflow: hidden; transform: translateY(8px) scale(.96); opacity: 0; transition: transform .25s cubic-bezier(.22, 1, .36, 1), opacity .2s cubic-bezier(.22, 1, .36, 1); }
+.w-modal[data-state="open"] { opacity: 1; }
+.w-modal[data-state="open"] .w-modal__panel { transform: none; opacity: 1; }
+.w-modal[data-state="closing"] { transition-duration: .15s; transition-timing-function: ease-in; }
+.w-modal[data-state="closing"] .w-modal__panel { transform: scale(.97); transition-duration: .15s; transition-timing-function: ease-in; }
+.w-modal .mm-appbar { padding-left: var(--mm-space-5); }
+.w-modal__badge { margin-right: var(--mm-space-2); }
+.w-modal__close { cursor: pointer; }
+.w-modal__body { overflow: auto; padding: var(--mm-space-5); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--mm-space-4); align-content: start; }
+.w-modal__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--mm-space-4); flex-wrap: wrap; padding: var(--mm-space-4) var(--mm-space-5); border-top: 1px solid var(--mm-line); background: var(--mm-card); font-size: 16px; color: var(--mm-muted); }
+.w-modal .mm-source { cursor: default; }
+.w-modal .mm-source:hover { border-color: var(--mm-line); }
+
+/* Streaming text (transitions.dev): jedes Wort löst sich aus einer leichten Unschärfe, eins nach dem anderen. */
+.w-stream-w { opacity: 0; filter: blur(var(--w-stream-blur)); transition: opacity var(--w-stream-fade) var(--w-stream-ease), filter var(--w-stream-fade) var(--w-stream-ease); }
+.w-stream-w.is-in { opacity: 1; filter: none; }
+.w-stream-block:not(.is-in) { display: none; }
+
+/* Skelett und „Antwort wird erstellt …“ bis zur Antwort, dann Überblendung – wie PendingAnswer/Writing der App */
+.w-reveal { display: grid; }
+.w-reveal > * { grid-area: 1 / 1; min-width: 0; }
+.w-skeleton--out { visibility: hidden; pointer-events: none; }
+.w-skeleton__bar { display: block; height: .9em; border-radius: 4px; background: color-mix(in srgb, var(--mm-ink) 10%, transparent); }
+.w-skeleton__bar--short { width: 60%; }
+.w-skeleton__bar--heading { width: 35%; height: 1.1em; margin-bottom: var(--mm-space-1); }
+.w-skeleton__body { display: grid; gap: var(--mm-space-2); max-width: var(--mm-measure); }
+.w-writing { display: flex; align-items: center; gap: var(--mm-space-2); color: var(--mm-muted); font-size: var(--mm-text-small); margin: 0; }
+.w-writing__matrix { display: inline-grid; grid-template-columns: repeat(4, 2px); grid-auto-rows: 2px; gap: 2px; flex: none; }
+.w-writing__matrix i { background: var(--mm-line); }
+.w-writing__matrix i:is(:nth-child(1), :nth-child(4), :nth-child(13), :nth-child(16)) { visibility: hidden; }
+@media (prefers-reduced-motion: no-preference) {
+  .w-writing__matrix i:is(:nth-child(2), :nth-child(3), :nth-child(8), :nth-child(12), :nth-child(15), :nth-child(14), :nth-child(9), :nth-child(5)) { animation: w-orbit 1.2s ease-in-out infinite; }
+  .w-writing__matrix i:nth-child(3) { animation-delay: 150ms; }
+  .w-writing__matrix i:nth-child(8) { animation-delay: 300ms; }
+  .w-writing__matrix i:nth-child(12) { animation-delay: 450ms; }
+  .w-writing__matrix i:nth-child(15) { animation-delay: 600ms; }
+  .w-writing__matrix i:nth-child(14) { animation-delay: 750ms; }
+  .w-writing__matrix i:nth-child(9) { animation-delay: 900ms; }
+  .w-writing__matrix i:nth-child(5) { animation-delay: 1050ms; }
+  .w-skeleton__bar { animation: w-pulse 1s ease-in-out infinite; }
+  .w-skeleton--out { visibility: visible; animation: w-reveal-out 400ms ease-in-out both; }
+  .w-reveal__content { animation: w-reveal-in 400ms ease-in-out both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .w-modal, .w-modal__panel { transition: none; transform: none; }
+  .w-stream-w { transition: none; }
+}
+@keyframes w-pulse { 50% { opacity: .5; } }
+@keyframes w-reveal-in { from { opacity: 0; filter: blur(2px); } }
+@keyframes w-reveal-out { to { opacity: 0; filter: blur(2px); } }
+@keyframes w-orbit { 0%, 45%, 100% { background-color: var(--mm-line); } 15% { background-color: currentColor; } }
+
+/* Markdown in der Erklärung, wie .markdown in der App */
+.markdown > :first-child { margin-top: 0; }
+.markdown > :last-child { margin-bottom: 0; }
+.markdown table { border-collapse: collapse; display: block; max-width: 100%; overflow-x: auto; }
+.markdown th, .markdown td { border-bottom: 1px solid var(--mm-line); padding: 6px 10px; text-align: left; }
+
+/* Warum kostenlos („Hebammen tragen die Geburtshilfe.“) */
+.w-why { background: var(--mm-moss); color: var(--mm-on-moss); }
+.w-why .w-why__title { max-width: 18em; color: var(--mm-on-moss); }
+.w-why__eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--mm-moss); }
+.w-why__reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--mm-space-6); border-top: 1px solid currentColor; padding-top: var(--mm-space-5); }
+.w-why__reasons h3 { margin: 0 0 var(--mm-space-2); font-size: var(--mm-text-h); line-height: 1.3; }
+.w-why__reasons p { margin: 0; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
+.w-stand { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--mm-space-7); background: var(--mm-card); color: var(--mm-ink); border-radius: 28px; padding: var(--mm-space-6); }
+.w-stand .mm-display { margin: 0; }
+.w-stand ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.w-stand li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: var(--mm-space-3); padding-block: var(--mm-space-3); border-bottom: 1px solid var(--mm-line); font-size: 17px; line-height: 1.55; }
+.w-stand li:last-child { border-bottom: 0; }
+.w-stand li strong { display: block; font-size: 18px; }
+.w-stand li span { color: var(--mm-muted); }
+.w-stand li svg { color: var(--mm-moss); margin-top: 3px; }
+
 /* Rechtstexte */
 .w-legal { max-width: var(--mm-measure); padding-block: var(--mm-space-7) 88px; display: grid; gap: var(--mm-space-5); }
 .w-legal h2 { margin: var(--mm-space-4) 0 0; font-size: var(--mm-text-h); line-height: 1.3; }
@@ -80,7 +172,8 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 
 @media (max-width: 900px) {
   .w-hero, .w-cta { grid-template-columns: minmax(0, 1fr); gap: var(--mm-space-6); padding-top: var(--mm-space-5); }
-  .w-grid3 { grid-template-columns: minmax(0, 1fr); }
+  .w-grid3, .w-why__reasons, .w-stand { grid-template-columns: minmax(0, 1fr); }
+  .w-stand { gap: var(--mm-space-5); padding: var(--mm-space-5); }
   .w-nav__links { display: none; }
   .w-nav__links + .mm-button { margin-left: auto; }
   .w-section { padding-block: 64px; }
@@ -88,4 +181,7 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 @media (max-width: 480px) {
   .w-wrap { padding-inline: var(--mm-space-4); }
   .w-shot { padding: var(--mm-space-3); }
+  .w-modal { padding: var(--mm-space-2); }
+  .w-modal__panel { max-height: calc(100dvh - 16px); }
+  .w-modal__body, .w-modal__foot { padding-inline: var(--mm-space-4); }
 }
