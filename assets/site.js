@@ -4,8 +4,7 @@
  */
 import { Marked } from './vendor/marked.esm.js';
 
-// Vorerst die lokale App; sobald app.midmind.de die neue App ausliefert: 'https://app.midmind.de'.
-const API = 'http://localhost:8080';
+const API = 'https://app.midmind.de';
 const PHASES = { schwangerschaft: ['Schwangerschaft', 'apricot'], geburt: ['Geburt', 'malve'], wochenbett: ['Wochenbett', 'sage'], abrechnung: ['Abrechnung', 'taube'] };
 /** Wie lange Skelett und Antwort mindestens bzw. beim Überblenden stehen (MIN_VISIBLE_MS, REVEAL_MS in der App). */
 const SKELETON_MS = 700;
