@@ -75,7 +75,7 @@ a:not(.mm-button):hover { color: var(--mm-ink); }
 .w-stack--snug { gap: var(--mm-space-3); }
 .w-section--roomy { gap: var(--mm-space-7); }
 
-/* Beispiele („Frag so, wie du denkst.“) – jede Karte öffnet die Antwort aus der App (assets/site.js) */
+/* Beispiele („Beispielfragen: Frag so, wie du denkst.“) – jede Karte öffnet die Antwort aus der App (assets/site.js) */
 .w-ex { font: inherit; text-align: left; border: 1px solid transparent; cursor: pointer; background: var(--mm-card); border-radius: var(--mm-radius-l); padding: var(--mm-space-5); display: grid; grid-template-rows: auto 1fr auto; gap: var(--mm-space-3); color: var(--mm-ink); transition: border-color .2s; }
 .w-ex:hover { border-color: var(--mm-line); }
 .w-ex:focus-visible { outline: 2px solid var(--mm-moss); outline-offset: 2px; }

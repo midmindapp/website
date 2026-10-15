@@ -1,4 +1,4 @@
-/* Beispielantworten („Frag so, wie du denkst.“): Ein Klick auf ein Beispiel öffnet die echte Antwort aus der App
+/* Beispielantworten („Beispielfragen: Frag so, wie du denkst.“): Ein Klick auf ein Beispiel öffnet die echte Antwort aus der App
  * (GET /preview/answers/{id}, ohne Login), aufgebaut wie die AnswerCard im Chat der App (midmind-app chat/Answer.tsx)
  * und Wort für Wort eingeblendet – „Streaming text“ von transitions.dev. Nachfragen gibt es hier nicht.
  */
