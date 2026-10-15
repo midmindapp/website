@@ -96,6 +96,7 @@ html:has(.w-modal[open]) { overflow: hidden; }
 .w-modal[data-state="open"] .w-modal__panel { transform: none; opacity: 1; }
 .w-modal[data-state="closing"] { transition-duration: .15s; transition-timing-function: ease-in; }
 .w-modal[data-state="closing"] .w-modal__panel { transform: scale(.97); transition-duration: .15s; transition-timing-function: ease-in; }
+.w-shot .mm-appbar,
 .w-modal .mm-appbar { padding-left: var(--mm-space-5); }
 .w-modal__badge { margin-right: var(--mm-space-2); }
 .w-modal__close { cursor: pointer; }
